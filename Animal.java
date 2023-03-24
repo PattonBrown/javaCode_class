@@ -11,8 +11,13 @@ class Dog extends Animal {// 只有一个唯一父类
     @Override // 提示覆盖父类方法
     public void saySomething() {
         // TODO Auto-generated method stub
-        // super.saySomething("Wang");
+        super.saySomething();
         System.out.println("Wang!");
+    }
+
+    Dog() {
+        super("max");
+        System.out.println("This is dog");
     }
 
     public void walk() {
@@ -29,6 +34,13 @@ class Pets {
 }
 
 public class Animal extends Pets {
+    public Animal(String name) {
+        setName(name);
+    }
+
+    public Animal() {
+        System.out.println("This is animal");
+    }
 
     public void saySomething() {
         System.out.println("Hello");
@@ -36,12 +48,12 @@ public class Animal extends Pets {
     }
 
     public static void main(String[] args) {
-        Duck duck = new Duck();
-        duck.saySomething();
-        duck.setName("xiaoHuang");
+        // Duck duck = new Duck();
+        // duck.saySomething();
+        // duck.setName("xiaoHuang");
 
         Dog dog = new Dog();
-        dog.saySomething();
-        dog.setName("xiaobai");
+        // dog.saySomething();
+        // dog.setName("xiaobai");
     }
 }
